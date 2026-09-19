@@ -1,0 +1,9 @@
+# Q-FLOW Dependencies
+# Add core dependencies as needed
+# e.g.:
+# numpy
+# scipy
+# pandas
+# matplotlib
+# pydantic
+# pytest
