@@ -1,0 +1,23 @@
+congestion:
+  low_density: 0.30
+  medium_density: 0.60
+  high_density: 0.80
+
+emergency:
+  min_green: 10
+  max_green: 60
+  clearance_time: 5
+  eta_buffer: 5
+
+impact:
+  radius: 2
+
+recovery:
+  enabled: true
+
+priority:
+  EMERGENCY: 100
+  ACCIDENT: 80
+  ROAD_CLOSURE: 70
+  CONGESTION: 50
+  PEDESTRIAN_SURGE: 40
