@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <!-- 4 Controlled Signalized Intersections -->
+    <node id="J1" x="0.0"   y="150.0" type="traffic_light" tl="J1"/>
+    <node id="J2" x="150.0" y="150.0" type="traffic_light" tl="J2"/>
+    <node id="J3" x="0.0"   y="0.0"   type="traffic_light" tl="J3"/>
+    <node id="J4" x="150.0" y="0.0"   type="traffic_light" tl="J4"/>
+
+    <!-- Perimeter Boundary Entry / Exit Nodes -->
+    <node id="N1" x="0.0"   y="300.0" type="priority"/>
+    <node id="N2" x="150.0" y="300.0" type="priority"/>
+    <node id="S1" x="0.0"   y="-150.0" type="priority"/>
+    <node id="S2" x="150.0" y="-150.0" type="priority"/>
+    <node id="W1" x="-150.0" y="150.0" type="priority"/>
+    <node id="W2" x="-150.0" y="0.0"   type="priority"/>
+    <node id="E1" x="300.0"  y="150.0" type="priority"/>
+    <node id="E2" x="300.0"  y="0.0"   type="priority"/>
+</nodes>

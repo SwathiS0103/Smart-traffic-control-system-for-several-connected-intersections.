@@ -1,9 +1,11 @@
-# Q-FLOW Dependencies
-# Add core dependencies as needed
-# e.g.:
-# numpy
-# scipy
-# pandas
-# matplotlib
-# pydantic
-# pytest
+# Q-FLOW Core Dependencies
+pydantic>=2.0
+pytest>=8.0
+traci>=1.20.0
+sumolib>=1.20.0
+
+# Optional Scientific / Optimization packages for Member 2 & 4
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+pandas>=2.0.0

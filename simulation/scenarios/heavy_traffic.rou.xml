@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicle Types -->
+    <vType id="passenger" accel="2.6" decel="4.5" sigma="0.7" length="5.0" minGap="2.0" maxSpeed="13.89" guiShape="passenger" color="1.0,0.4,0.0"/>
+    <vType id="emergency" accel="3.5" decel="6.0" sigma="0.2" length="6.5" minGap="2.0" maxSpeed="20.0" vClass="emergency" guiShape="emergency" color="1.0,0.0,0.0" speedFactor="1.3"/>
+
+    <!-- Corridor Routes -->
+    <route id="r_N1_S1" edges="N1_J1 J1_J3 J3_S1"/>
+    <route id="r_S1_N1" edges="S1_J3 J3_J1 J1_N1"/>
+    <route id="r_N2_S2" edges="N2_J2 J2_J4 J4_S2"/>
+    <route id="r_S2_N2" edges="S2_J4 J4_J2 J2_N2"/>
+
+    <route id="r_W1_E1" edges="W1_J1 J1_J2 J2_E1"/>
+    <route id="r_E1_W1" edges="E1_J2 J2_J1 J1_W1"/>
+    <route id="r_W2_E2" edges="W2_J3 J3_J4 J4_E2"/>
+    <route id="r_E2_W2" edges="E2_J4 J4_J3 J3_W2"/>
+
+    <route id="r_W1_S2" edges="W1_J1 J1_J2 J2_J4 J4_S2"/>
+    <route id="r_N1_E2" edges="N1_J1 J1_J3 J3_J4 J4_E2"/>
+    <route id="r_S2_W1" edges="S2_J4 J4_J3 J3_J1 J1_W1"/>
+    <route id="r_E2_N1" edges="E2_J4 J4_J2 J2_J1 J1_N1"/>
+
+    <!-- Heavy Flow Demand (period 3-5 seconds -> High Insertion Rate & Congestion) -->
+    <flow id="hf_N1_S1" route="r_N1_S1" type="passenger" begin="0" end="3600" period="4"/>
+    <flow id="hf_S1_N1" route="r_S1_N1" type="passenger" begin="0" end="3600" period="4"/>
+    <flow id="hf_N2_S2" route="r_N2_S2" type="passenger" begin="0" end="3600" period="4"/>
+    <flow id="hf_S2_N2" route="r_S2_N2" type="passenger" begin="0" end="3600" period="4"/>
+
+    <flow id="hf_W1_E1" route="r_W1_E1" type="passenger" begin="0" end="3600" period="3"/>
+    <flow id="hf_E1_W1" route="r_E1_W1" type="passenger" begin="0" end="3600" period="3"/>
+    <flow id="hf_W2_E2" route="r_W2_E2" type="passenger" begin="0" end="3600" period="4"/>
+    <flow id="hf_E2_W2" route="r_E2_W2" type="passenger" begin="0" end="3600" period="4"/>
+
+    <flow id="hf_W1_S2" route="r_W1_S2" type="passenger" begin="0" end="3600" period="6"/>
+    <flow id="hf_N1_E2" route="r_N1_E2" type="passenger" begin="0" end="3600" period="6"/>
+    <flow id="hf_S2_W1" route="r_S2_W1" type="passenger" begin="0" end="3600" period="6"/>
+    <flow id="hf_E2_N1" route="r_E2_N1" type="passenger" begin="0" end="3600" period="6"/>
+
+    <!-- Pedestrian Demand -->
+    <personFlow id="p_J1_EW" begin="0" end="3600" period="15"><walk from="W1_J1" to="J1_J2"/></personFlow>
+    <personFlow id="p_J2_NS" begin="0" end="3600" period="15"><walk from="N2_J2" to="J2_J4"/></personFlow>
+    <personFlow id="p_J3_NS" begin="0" end="3600" period="15"><walk from="J1_J3" to="J3_S1"/></personFlow>
+    <personFlow id="p_J4_EW" begin="0" end="3600" period="15"><walk from="J3_J4" to="J4_E2"/></personFlow>
+</routes>
